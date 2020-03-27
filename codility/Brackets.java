@@ -1,8 +1,6 @@
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Brackets {
-
 
     public int solution(String S) {
         Stack<Character> openBrackets = new Stack<>();
@@ -30,5 +28,4 @@ public class Brackets {
 
         return 1;
     }
-
 }
