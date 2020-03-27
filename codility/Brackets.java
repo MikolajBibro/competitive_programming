@@ -4,13 +4,11 @@ public class Brackets {
 
     public int solution(String S) {
         Stack<Character> openBrackets = new Stack<>();
-
-        Map<Character, Character> openToCloseBracketMap = new HashMap<Character, Character>() {{
+        Map<Character, Character> openToCloseBracketMap = new HashMap<>() {{
             put('{', '}');
             put('(', ')');
             put('[', ']');
         }};
-
 
         for (int i = 0; i < S.length(); i++) {
             Character bracket = S.charAt(i);
@@ -22,10 +20,6 @@ public class Brackets {
             }
         }
 
-        if (!openBrackets.isEmpty()) {
-            return 0;
-        }
-
-        return 1;
+        return openBrackets.isEmpty() ? 1 : 0;
     }
 }
